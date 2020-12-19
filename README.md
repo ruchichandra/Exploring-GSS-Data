@@ -56,9 +56,8 @@ In this dataset, there are 25146 males and 31915 females out of total 57061 resp
   filter(satfin == "Satisfied") %>%
   summarise(satisfied = n())`
 
-`data <- data.frame(total, satisfied[ ,2])`
-
-`data`
+`data <- data.frame(total, satisfied[ ,2])
+data`
 
 > ####     sex total satisfied 
 > 
@@ -70,7 +69,6 @@ Here, the total numbers of financially satisfied males and females have been cal
 
 `data <- data %>%
   mutate(prop_satisfied = satisfied / total)
-
 data`
 
 > ####      sex total satisfied prop_satisfied 

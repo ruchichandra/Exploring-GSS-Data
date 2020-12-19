@@ -5,7 +5,9 @@
 ### Setup
 ### Load packages
 `library(ggplot2)`
+
 `library(dplyr)`
+
 `library(statsr)`
 
 ### Load data
@@ -33,35 +35,37 @@ For this research question, I will take two variables into account: 1) sex: Resp
 
 ## Part 3: Exploratory data analysis
 
-total <- gss %>%
+`total <- gss %>%
   group_by(sex) %>%
-  summarise(total = n())
+  summarise(total = n())`
 
-total
- # A tibble: 2 × 2
+total`
+
+  A tibble: 2 × 2
      sex total
- <fctr> <int>
+  <fctr> <int>
  1   Male 25146
  2 Female 31915
 In this dataset, there are 25146 males and 31915 females out of total 57061 respondents. These numbers will be used for the calculation of proportion later.
 
-satisfied <- gss %>%
+`satisfied <- gss %>%
   group_by(sex) %>%
   filter(satfin == "Satisfied") %>%
-  summarise(satisfied = n())
+  summarise(satisfied = n())`
 
-data <- data.frame(total, satisfied[ ,2])
+`data <- data.frame(total, satisfied[ ,2])`
 
-data
+`data`
+
       sex total satisfied
  1   Male 25146      6951
  2 Female 31915      8393
 Here, the total numbers of financially satisfied males and females have been calculated. There are 6951 satisfied males and 8393 satisfied females.
 
-data <- data %>%
-  mutate(prop_satisfied = satisfied / total)
+`data <- data %>%
+  mutate(prop_satisfied = satisfied / total)`
 
-data
+`data`
       sex total satisfied prop_satisfied
  1   Male 25146      6951      0.2764257
  2 Female 31915      8393      0.2629798
@@ -85,10 +89,12 @@ The hypothesis test for comparing two proportions is ideal, as the data has been
 The significance level for this test has been used as 5% i.e. alpha = 0.05 (a = 0.05)
 
 There are three options for financial satisfaction - Satisfied, More or Less Not at all Satisfied - but I am only interested about those individuals who are very well satisfied. Create a new dataset gss_2 with a new column for whether or not they were satisfied. I am left with only two options Satisfied or Unsatisfied.
-gss_2 <- gss %>%
-  mutate(fin_sat = satfin == "Satisfied") 
+
+`gss_2 <- gss %>%
+  mutate(fin_sat = satfin == "Satisfied")`
   
-inference(data = gss_2, x = sex, y = fin_sat, statistic = "proportion", null =0,type = "ht", method = "theoretical", success = TRUE, alternative = "twosided", sig_level = 0.95)
+`inference(data = gss_2, x = sex, y = fin_sat, statistic = "proportion", null =0,type = "ht", method = "theoretical", success = TRUE, alternative = "twosided", sig_level = 0.95)`
+
 ## Response variable: categorical (2 levels, success: TRUE)
 ## Explanatory variable: categorical (2 levels) 
 ## n_Male = 23126, p_hat_Male = 0.3006

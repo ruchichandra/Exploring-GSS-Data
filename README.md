@@ -41,11 +41,11 @@ For this research question, I will take two variables into account: 1) sex: Resp
 
 total`
 
- #### # A tibble: 2 × 2
+ `#### # A tibble: 2 × 2
  #### #      sex total
  #### #   <fctr> <int>
  #### # 1   Male 25146
- #### # 2 Female 31915
+ #### # 2 Female 31915`
 
 In this dataset, there are 25146 males and 31915 females out of total 57061 respondents. These numbers will be used for the calculation of proportion later.
 
@@ -58,9 +58,9 @@ In this dataset, there are 25146 males and 31915 females out of total 57061 resp
 
 `data`
 
-      #### #      sex total satisfied
+      `#### #      sex total satisfied
  #### # 1   Male 25146      6951
- #### # 2 Female 31915      8393
+ #### # 2 Female 31915      8393`
 
 
 Here, the total numbers of financially satisfied males and females have been calculated. There are 6951 satisfied males and 8393 satisfied females.
@@ -70,9 +70,9 @@ Here, the total numbers of financially satisfied males and females have been cal
 
 data`
 
-      #### #      sex total satisfied prop_satisfied
+     ` #### #      sex total satisfied prop_satisfied
  #### # 1   Male 25146      6951      0.2764257
- #### # 2 Female 31915      8393      0.2629798
+ #### # 2 Female 31915      8393      0.2629798`
 
 From the above calculation of proportion of financillay satisfied people of each gender, we can see that 27.6% males are happy with their financial situation while 26.2% of females are financially satisfied.
 
@@ -100,13 +100,13 @@ There are three options for financial satisfaction - Satisfied, More or Less Not
   
 `inference(data = gss_2, x = sex, y = fin_sat, statistic = "proportion", null =0,type = "ht", method = "theoretical", success = TRUE, alternative = "twosided", sig_level = 0.95)`
 
- #### # Response variable: categorical (2 levels, success: TRUE)
+ `#### # Response variable: categorical (2 levels, success: TRUE)
  #### # Explanatory variable: categorical (2 levels) 
  #### # n_Male = 23126, p_hat_Male = 0.3006
  #### # n_Female = 29328, p_hat_Female = 0.2862
  #### ### HA: p_Male != p_Female
  #### # z = 3.5978
- #### # p_value = 3e-04
+ #### # p_value = 3e-04`
 
 
 

@@ -111,7 +111,7 @@ There are three options for financial satisfaction - Satisfied, More or Less Not
  > z = 3.5978  
  > p_value = 3e-04 
 
-
+![Analysis](https://github.com/ruchichandra/Exploring-GSS-Data/blob/main/Analysis.PNG)
 
 
 From the sample distribution and the exploratory analysis, it seems that proportion of males who are satisfied financially is slightly more than the proportion of females.

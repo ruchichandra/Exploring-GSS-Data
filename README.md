@@ -4,12 +4,12 @@
 
 ### Setup
 ### Load packages
-library(ggplot2)
-library(dplyr)
-library(statsr)
+`library(ggplot2)`
+`library(dplyr)`
+`library(statsr)`
 
 ### Load data
-load("gss.Rdata")
+`load("gss.Rdata")`
 
 ## Part 1: Data
 The General Social Survey (GSS) has been monitoring societal change and studying the growing complexity of American society since 1972. The GSS aims to gather data on contemporary American society in order to monitor and explain trends and constants in attitudes, behaviors, and attributes; to examine the structure and functioning of society in general as well as the role played by relevant subgroups; to compare the United States to other societies in order to place American society in comparative perspective and develop cross-national models of human society; and to make high-quality data easily accessible to scholars, students, policy makers, and others, with minimal cost and waiting.
